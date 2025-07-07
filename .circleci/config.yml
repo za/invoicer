@@ -47,8 +47,8 @@ jobs:
             if [ $? -ne 1 ]; then exit 0; else exit 1; fi;
             )
 
-      - run:
-          name: Test dependencies are up to date
+      # - run:
+      #    name: Test dependencies are up to date
           # command: 'GOPATH="${GOPATH_HEAD}"; ( cd ${GOPATH_BASE}/${CIRCLE_PROJECT_REPONAME} && govend -u --prune && git diff --quiet )'
 
       - deploy:
